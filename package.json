@@ -1,0 +1,54 @@
+{
+  "name": "opencode-openspec-status",
+  "version": "0.1.0",
+  "description": "Read-only OpenCode TUI plugin that shows where your OpenSpec (SDD) change or ODD feature stands, as a flow diagram in the sidebar.",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "author": "mjtc1985",
+  "homepage": "https://github.com/mjtc1985/opencode-openspec-status#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjtc1985/opencode-openspec-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mjtc1985/opencode-openspec-status/issues"
+  },
+  "exports": {
+    ".": "./src/tui.tsx",
+    "./tui": "./src/tui.tsx"
+  },
+  "oc-plugin": ["tui"],
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run typecheck && bun test"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tui",
+    "openspec",
+    "sdd",
+    "odd",
+    "gentle-ai",
+    "spec-driven-development"
+  ],
+  "peerDependencies": {
+    "@opencode-ai/plugin": "1.18.33"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "1.18.33",
+    "@opentui/core": "0.5.13",
+    "@opentui/keymap": "0.5.13",
+    "@opentui/solid": "0.5.13",
+    "@types/bun": "^1.4.2",
+    "solid-js": "1.9.15",
+    "typescript": "^7.0.2"
+  }
+}
