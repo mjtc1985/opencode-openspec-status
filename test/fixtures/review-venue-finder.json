@@ -1,0 +1,11 @@
+{
+  "schema": "gentle-ai.review-authority-status/v1",
+  "operation": "review/status",
+  "repository": "/home/dev/projects/venue-finder",
+  "complete": true,
+  "authoritative": true,
+  "status": "clean",
+  "entries": [],
+  "locks": [],
+  "diagnostics": []
+}

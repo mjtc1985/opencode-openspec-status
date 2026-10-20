@@ -1,0 +1,76 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "find-alternative-venue",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/home/dev/projects/venue-finder/openspec"
+  },
+  "changeRoot": "/home/dev/projects/venue-finder/openspec/changes/find-alternative-venue",
+  "artifactPaths": {
+    "proposal": [
+      "/home/dev/projects/venue-finder/openspec/changes/find-alternative-venue/proposal.md"
+    ],
+    "specs": [],
+    "design": [],
+    "tasks": [
+      "/home/dev/projects/venue-finder/openspec/changes/find-alternative-venue/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [
+      "/home/dev/projects/venue-finder/openspec/changes/find-alternative-venue/proposal.md"
+    ],
+    "specs": [],
+    "design": [],
+    "tasks": [
+      "/home/dev/projects/venue-finder/openspec/changes/find-alternative-venue/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "missing",
+    "proposal": "done",
+    "specs": "missing",
+    "tasks": "done",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 15,
+    "completed": 4,
+    "pending": 11,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "all_done",
+    "specs": "blocked",
+    "design": "blocked",
+    "tasks": "all_done",
+    "apply": "blocked",
+    "verify": "blocked",
+    "archive": "blocked"
+  },
+  "applyState": "blocked",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/home/dev/projects/venue-finder",
+    "allowedEditRoots": [
+      "/home/dev/projects/venue-finder"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "spec",
+  "blockedReasons": [],
+  "notes": []
+}

@@ -1,0 +1,84 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "c4-tasks-zero",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/tmp/fixtures/synth/openspec"
+  },
+  "changeRoot": "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero",
+  "artifactPaths": {
+    "proposal": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/proposal.md"
+    ],
+    "specs": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/specs/status-agent/spec.md"
+    ],
+    "design": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/design.md"
+    ],
+    "tasks": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/proposal.md"
+    ],
+    "specs": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/specs/status-agent/spec.md"
+    ],
+    "design": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/design.md"
+    ],
+    "tasks": [
+      "/tmp/fixtures/synth/openspec/changes/c4-tasks-zero/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "done",
+    "proposal": "done",
+    "specs": "done",
+    "tasks": "done",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 16,
+    "completed": 0,
+    "pending": 16,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "all_done",
+    "specs": "all_done",
+    "design": "all_done",
+    "tasks": "all_done",
+    "apply": "ready",
+    "verify": "ready",
+    "archive": "ready"
+  },
+  "applyState": "ready",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/tmp/fixtures/synth",
+    "allowedEditRoots": [
+      "/tmp/fixtures/synth"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "apply",
+  "blockedReasons": [],
+  "notes": []
+}

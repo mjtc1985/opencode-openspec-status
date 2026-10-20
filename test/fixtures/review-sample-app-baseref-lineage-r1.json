@@ -1,0 +1,149 @@
+{
+  "schema": "gentle-ai.review-integration.status/v9",
+  "contract": "gentle-ai.review-integration/v2",
+  "operation": "review.status",
+  "applicability": "current_target",
+  "authority": {
+    "version": "compact-v2",
+    "lineage_id": "review-ff3e92437e221e59-r1",
+    "state": "correction_required",
+    "generation": 2,
+    "revision": "sha256:a6c2aa898023c971087bd90f90957a9b33a77cabd1697924811023d5cce62175"
+  },
+  "action": "stop",
+  "replayability": "manual_action_required",
+  "frozen": {
+    "tier": "high",
+    "original_changed_lines": 1024,
+    "correction_budget": 200
+  },
+  "target_identity": "sha256:f3381a06e661a8e16efb0424ad7aedbfbbb441fcc09e4ae020beed3b0f90e5be",
+  "authority_target_identity": "sha256:f534f80d383318be3e633ae3f7d40a37b0e05a25b721114d6e8fd3b89216a3ae",
+  "projection": {
+    "schema": "gentle-ai.review-integration.projection/v1",
+    "kind": "base-diff",
+    "projection": "workspace",
+    "base_tree": "03fb6c393e787f1b75ebdafbc7c53c527b52a089",
+    "initial_review_tree": "4245f6d642a8702bc8c5de8cc67be45cd97f0119",
+    "current_candidate_tree": "0d4971b2e8d142511bb9a777393e6141fb093b09",
+    "paths_digest": "sha256:e2ce1de36b8914f4f31be3aa5e0016ac31b6467fa731de90055b978e1ba03d72",
+    "paths": [
+      "README.md",
+      "bin/sample-app.ts",
+      "content/opencode/agents/sample-app.md",
+      "content/opencode/commands/alk-build.md",
+      "content/opencode/commands/alk-check.md",
+      "content/opencode/commands/alk-config.md",
+      "content/opencode/commands/alk-plan.md",
+      "content/opencode/commands/alk-start.md",
+      "content/opencode/commands/alk-status.md",
+      "src/core/config.ts",
+      "src/opencode/install.ts",
+      "src/opencode/jsonc.ts",
+      "src/opencode/tui-model.ts",
+      "src/opencode/tui.tsx",
+      "test/content.test.ts",
+      "test/core/config.test.ts",
+      "test/install.test.ts",
+      "test/opencode/jsonc.test.ts",
+      "test/opencode/tui-model.test.ts"
+    ],
+    "intended_untracked": [],
+    "intended_untracked_proof": "sha256:b97229718d4c7fe50a8892eb474ae5aa6491697bccb400e3e31dbaca4894d2f3",
+    "initial_snapshot_identity": "sha256:f534f80d383318be3e633ae3f7d40a37b0e05a25b721114d6e8fd3b89216a3ae",
+    "current_snapshot_identity": "sha256:f3381a06e661a8e16efb0424ad7aedbfbbb441fcc09e4ae020beed3b0f90e5be"
+  },
+  "eligible_untracked_inventory": "sha256:0fc9c89f9fb57a5340cb06a0d61707dbf4d16b8d18d78a55fd8c28d114b47735",
+  "repair": {
+    "schema": "gentle-ai.review-authority-repair-assessment/v1",
+    "status": "unsupported",
+    "counts": {
+      "lineages": 0,
+      "compact_lineages": 0,
+      "legacy_lineages": 0,
+      "events": 0,
+      "bytes": 0,
+      "eligible_candidates": 0,
+      "unsupported_lineages": 0,
+      "conflicts": 0
+    },
+    "supported_operations": [
+      "review/complete-fix",
+      "review/validate-fix"
+    ],
+    "authorization_schema": "gentle-ai.review-repair-authorization/v1"
+  },
+  "candidates": [],
+  "eligibility": {
+    "allowed_actions": [
+      {
+        "action": "stop",
+        "reason_code": "forbidden_manual_intervention_required",
+        "required_inputs": []
+      }
+    ],
+    "forbidden_actions": [
+      {
+        "action": "review.abandon",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.invalidate",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.quarantine-legacy",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.reclaim",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.reconcile-authority",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.reconcile-authority-batch",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.recover",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.repair",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.start",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      },
+      {
+        "action": "review.validate",
+        "reason_code": "forbidden_unchanged_escalated_candidate"
+      }
+    ]
+  },
+  "forecast": {
+    "horizon": "terminal",
+    "steps": [
+      {
+        "step": 1,
+        "kind": "stop",
+        "reason_code": "captured_artifacts_unverifiable",
+        "description": "Captured artifacts failed verification or are missing"
+      }
+    ]
+  },
+  "next_transition": {
+    "kind": "stop",
+    "reason_code": "captured_artifacts_unverifiable"
+  },
+  "repository_context": {
+    "capability": "review.opaque_repository_context",
+    "handle": "rctx2_44a3d6844db045826b2f4a88a7e321c15a40b677ff93b29846258df1e196a482",
+    "revision": "sha256:321d6f8c92357d3463ce118459d9146a560c8c0c0ee9218cebe3dbb0e2757f9b",
+    "target_identity": "sha256:08107c2e1b281a70ef28a0b3fc0ee1658975c2bce84435776ef93f1229c0cb4e"
+  }
+}

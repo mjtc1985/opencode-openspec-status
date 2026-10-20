@@ -1,0 +1,187 @@
+{
+  "schema": "gentle-ai.review-integration.status/v9",
+  "contract": "gentle-ai.review-integration/v2",
+  "operation": "review.status",
+  "applicability": "current_target",
+  "authority": {
+    "version": "compact-v2",
+    "lineage_id": "review-ff3e92437e221e59",
+    "state": "correction_required",
+    "generation": 1,
+    "revision": "sha256:c6cb5bb6e91796550dd8586a29c3b53387571d7413d4267e480b7d2da3376950"
+  },
+  "action": "recover",
+  "action_disposition": "scope_changed",
+  "replayability": "manual_action_required",
+  "frozen": {
+    "tier": "high",
+    "original_changed_lines": 1001,
+    "correction_budget": 200
+  },
+  "target_identity": "sha256:f3381a06e661a8e16efb0424ad7aedbfbbb441fcc09e4ae020beed3b0f90e5be",
+  "authority_target_identity": "sha256:529e8d5bad4b8bc1ee4cae2ce48d7f3151f2f05ee5f5bcbaa1e6a138c6e29ece",
+  "projection": {
+    "schema": "gentle-ai.review-integration.projection/v1",
+    "kind": "base-diff",
+    "projection": "workspace",
+    "base_tree": "03fb6c393e787f1b75ebdafbc7c53c527b52a089",
+    "initial_review_tree": "9a34d3744eeda1bde3eb35e7035e1e8fb5a886c2",
+    "current_candidate_tree": "0d4971b2e8d142511bb9a777393e6141fb093b09",
+    "paths_digest": "sha256:e2ce1de36b8914f4f31be3aa5e0016ac31b6467fa731de90055b978e1ba03d72",
+    "paths": [
+      "README.md",
+      "bin/sample-app.ts",
+      "content/opencode/agents/sample-app.md",
+      "content/opencode/commands/alk-build.md",
+      "content/opencode/commands/alk-check.md",
+      "content/opencode/commands/alk-config.md",
+      "content/opencode/commands/alk-plan.md",
+      "content/opencode/commands/alk-start.md",
+      "content/opencode/commands/alk-status.md",
+      "src/core/config.ts",
+      "src/opencode/install.ts",
+      "src/opencode/jsonc.ts",
+      "src/opencode/tui-model.ts",
+      "src/opencode/tui.tsx",
+      "test/content.test.ts",
+      "test/core/config.test.ts",
+      "test/install.test.ts",
+      "test/opencode/jsonc.test.ts",
+      "test/opencode/tui-model.test.ts"
+    ],
+    "intended_untracked": [],
+    "intended_untracked_proof": "sha256:b97229718d4c7fe50a8892eb474ae5aa6491697bccb400e3e31dbaca4894d2f3",
+    "initial_snapshot_identity": "sha256:529e8d5bad4b8bc1ee4cae2ce48d7f3151f2f05ee5f5bcbaa1e6a138c6e29ece",
+    "current_snapshot_identity": "sha256:f3381a06e661a8e16efb0424ad7aedbfbbb441fcc09e4ae020beed3b0f90e5be"
+  },
+  "eligible_untracked_inventory": "sha256:0fc9c89f9fb57a5340cb06a0d61707dbf4d16b8d18d78a55fd8c28d114b47735",
+  "repair": {
+    "schema": "gentle-ai.review-authority-repair-assessment/v1",
+    "status": "unsupported",
+    "counts": {
+      "lineages": 0,
+      "compact_lineages": 0,
+      "legacy_lineages": 0,
+      "events": 0,
+      "bytes": 0,
+      "eligible_candidates": 0,
+      "unsupported_lineages": 0,
+      "conflicts": 0
+    },
+    "supported_operations": [
+      "review/complete-fix",
+      "review/validate-fix"
+    ],
+    "authorization_schema": "gentle-ai.review-repair-authorization/v1"
+  },
+  "candidates": [],
+  "eligibility": {
+    "allowed_actions": [
+      {
+        "action": "review.recover",
+        "reason_code": "eligible_recovery",
+        "required_inputs": [
+          "predecessor_lineage",
+          "expected_predecessor_revision",
+          "successor_lineage",
+          "disposition",
+          "reason",
+          "actor",
+          "maintainer_authorization"
+        ],
+        "disposition": "scope_changed",
+        "binding": {
+          "lineage_id": "review-ff3e92437e221e59",
+          "revision": "sha256:c6cb5bb6e91796550dd8586a29c3b53387571d7413d4267e480b7d2da3376950",
+          "target_identity": "sha256:f3381a06e661a8e16efb0424ad7aedbfbbb441fcc09e4ae020beed3b0f90e5be"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      {
+        "action": "review.abandon",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.invalidate",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.quarantine-legacy",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.reclaim",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.reconcile-authority",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.reconcile-authority-batch",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.repair",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.start",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      },
+      {
+        "action": "review.validate",
+        "reason_code": "forbidden_not_selected_by_native_status"
+      }
+    ]
+  },
+  "forecast": {
+    "horizon": "partial",
+    "steps": [
+      {
+        "step": 1,
+        "kind": "collect",
+        "reason_code": "recovery_authorization_required",
+        "description": "recovery authorization required"
+      }
+    ]
+  },
+  "next_transition": {
+    "kind": "collect",
+    "reason_code": "recovery_authorization_required",
+    "collect": {
+      "inputs": [
+        {
+          "name": "recovery_authorization",
+          "schema": "gentle-ai.review-recovery-authorization/v1",
+          "capture_operation": "external.authorize_recovery",
+          "arguments": [
+            {
+              "name": "lineage",
+              "value": "review-ff3e92437e221e59"
+            },
+            {
+              "name": "expected-revision",
+              "value": "sha256:c6cb5bb6e91796550dd8586a29c3b53387571d7413d4267e480b7d2da3376950"
+            },
+            {
+              "name": "target",
+              "value": "sha256:f3381a06e661a8e16efb0424ad7aedbfbbb441fcc09e4ae020beed3b0f90e5be"
+            },
+            {
+              "name": "disposition",
+              "value": "scope_changed"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "repository_context": {
+    "capability": "review.opaque_repository_context",
+    "handle": "rctx2_69d6d0b72bcac4b712ef6a6481c47c8834b9f581b98d52dc51408de105c85f17",
+    "revision": "sha256:c2b244cfdef17691465ec6494822528f2c3ce10f1457465257cf856ef7011b3b",
+    "target_identity": "sha256:529e8d5bad4b8bc1ee4cae2ce48d7f3151f2f05ee5f5bcbaa1e6a138c6e29ece"
+  }
+}

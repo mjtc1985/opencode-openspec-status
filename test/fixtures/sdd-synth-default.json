@@ -1,0 +1,79 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": null,
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/tmp/fixtures/synth/openspec"
+  },
+  "changeRoot": null,
+  "artifactPaths": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "missing",
+    "proposal": "missing",
+    "specs": "missing",
+    "tasks": "missing",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 0,
+    "completed": 0,
+    "pending": 0,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "blocked",
+    "specs": "blocked",
+    "design": "blocked",
+    "tasks": "blocked",
+    "apply": "blocked",
+    "verify": "blocked",
+    "archive": "blocked"
+  },
+  "applyState": "blocked",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/tmp/fixtures/synth",
+    "allowedEditRoots": [
+      "/tmp/fixtures/synth"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "select-change",
+  "blockedReasons": [
+    "Change selection is ambiguous: c1-proposal-only, c2-specs, c3-design, c4-tasks-zero, c5-tasks-partial, c6-all-done-no-progress, c7-progress, c8-verified, c9-tasks-only.",
+    "Run `gentle-ai sdd-status c1-proposal-only --cwd /tmp/fixtures/synth` to continue with c1-proposal-only.",
+    "Run `gentle-ai sdd-status c2-specs --cwd /tmp/fixtures/synth` to continue with c2-specs.",
+    "Run `gentle-ai sdd-status c3-design --cwd /tmp/fixtures/synth` to continue with c3-design.",
+    "Run `gentle-ai sdd-status c4-tasks-zero --cwd /tmp/fixtures/synth` to continue with c4-tasks-zero.",
+    "Run `gentle-ai sdd-status c5-tasks-partial --cwd /tmp/fixtures/synth` to continue with c5-tasks-partial.",
+    "Run `gentle-ai sdd-status c6-all-done-no-progress --cwd /tmp/fixtures/synth` to continue with c6-all-done-no-progress.",
+    "Run `gentle-ai sdd-status c7-progress --cwd /tmp/fixtures/synth` to continue with c7-progress.",
+    "Run `gentle-ai sdd-status c8-verified --cwd /tmp/fixtures/synth` to continue with c8-verified.",
+    "Run `gentle-ai sdd-status c9-tasks-only --cwd /tmp/fixtures/synth` to continue with c9-tasks-only."
+  ],
+  "notes": []
+}

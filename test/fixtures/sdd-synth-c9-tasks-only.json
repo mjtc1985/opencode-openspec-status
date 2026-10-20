@@ -1,0 +1,72 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "c9-tasks-only",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/tmp/fixtures/synth/openspec"
+  },
+  "changeRoot": "/tmp/fixtures/synth/openspec/changes/c9-tasks-only",
+  "artifactPaths": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [
+      "/tmp/fixtures/synth/openspec/changes/c9-tasks-only/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [
+      "/tmp/fixtures/synth/openspec/changes/c9-tasks-only/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "missing",
+    "proposal": "missing",
+    "specs": "missing",
+    "tasks": "done",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 16,
+    "completed": 6,
+    "pending": 10,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "blocked",
+    "specs": "blocked",
+    "design": "blocked",
+    "tasks": "all_done",
+    "apply": "blocked",
+    "verify": "blocked",
+    "archive": "blocked"
+  },
+  "applyState": "blocked",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/tmp/fixtures/synth",
+    "allowedEditRoots": [
+      "/tmp/fixtures/synth"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "propose",
+  "blockedReasons": [],
+  "notes": []
+}

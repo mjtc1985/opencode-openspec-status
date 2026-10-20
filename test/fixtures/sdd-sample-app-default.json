@@ -1,0 +1,70 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": null,
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/home/dev/projects/sample-app/openspec"
+  },
+  "changeRoot": null,
+  "artifactPaths": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "missing",
+    "proposal": "missing",
+    "specs": "missing",
+    "tasks": "missing",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 0,
+    "completed": 0,
+    "pending": 0,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "blocked",
+    "specs": "blocked",
+    "design": "blocked",
+    "tasks": "blocked",
+    "apply": "blocked",
+    "verify": "blocked",
+    "archive": "blocked"
+  },
+  "applyState": "blocked",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/home/dev/projects/sample-app",
+    "allowedEditRoots": [
+      "/home/dev/projects/sample-app"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "sdd-new",
+  "blockedReasons": [
+    "No active OpenSpec changes found under openspec/changes."
+  ],
+  "notes": []
+}

@@ -1,0 +1,76 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "c2-specs",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/tmp/fixtures/synth/openspec"
+  },
+  "changeRoot": "/tmp/fixtures/synth/openspec/changes/c2-specs",
+  "artifactPaths": {
+    "proposal": [
+      "/tmp/fixtures/synth/openspec/changes/c2-specs/proposal.md"
+    ],
+    "specs": [
+      "/tmp/fixtures/synth/openspec/changes/c2-specs/specs/status-agent/spec.md"
+    ],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [
+      "/tmp/fixtures/synth/openspec/changes/c2-specs/proposal.md"
+    ],
+    "specs": [
+      "/tmp/fixtures/synth/openspec/changes/c2-specs/specs/status-agent/spec.md"
+    ],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "missing",
+    "proposal": "done",
+    "specs": "done",
+    "tasks": "missing",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 0,
+    "completed": 0,
+    "pending": 0,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "all_done",
+    "specs": "all_done",
+    "design": "blocked",
+    "tasks": "blocked",
+    "apply": "blocked",
+    "verify": "blocked",
+    "archive": "blocked"
+  },
+  "applyState": "blocked",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/tmp/fixtures/synth",
+    "allowedEditRoots": [
+      "/tmp/fixtures/synth"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "design",
+  "blockedReasons": [],
+  "notes": []
+}

@@ -1,0 +1,84 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "uptime-diagnostics",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/home/dev/projects/homelab/openspec"
+  },
+  "changeRoot": "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics",
+  "artifactPaths": {
+    "proposal": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/proposal.md"
+    ],
+    "specs": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/specs/monitoring-diagnostics/spec.md"
+    ],
+    "design": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/design.md"
+    ],
+    "tasks": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/proposal.md"
+    ],
+    "specs": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/specs/monitoring-diagnostics/spec.md"
+    ],
+    "design": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/design.md"
+    ],
+    "tasks": [
+      "/home/dev/projects/homelab/openspec/changes/uptime-diagnostics/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "done",
+    "proposal": "done",
+    "specs": "done",
+    "tasks": "done",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 11,
+    "completed": 11,
+    "pending": 0,
+    "allComplete": true
+  },
+  "dependencies": {
+    "proposal": "all_done",
+    "specs": "all_done",
+    "design": "all_done",
+    "tasks": "all_done",
+    "apply": "all_done",
+    "verify": "ready",
+    "archive": "ready"
+  },
+  "applyState": "all_done",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/home/dev/projects/homelab",
+    "allowedEditRoots": [
+      "/home/dev/projects/homelab"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "archive",
+  "blockedReasons": [],
+  "notes": []
+}

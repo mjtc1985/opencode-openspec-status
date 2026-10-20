@@ -1,0 +1,157 @@
+{
+  "schema": "gentle-ai.review-state-record/v2",
+  "revision": "sha256:a6c2aa898023c971087bd90f90957a9b33a77cabd1697924811023d5cce62175",
+  "state": {
+    "schema": "gentle-ai.review-state/v2",
+    "lineage_id": "review-ff3e92437e221e59-r1",
+    "generation": 2,
+    "state": "correction_required",
+    "risk_level": "high",
+    "selected_lenses": [
+      "review-risk",
+      "review-resilience",
+      "review-readability",
+      "review-reliability"
+    ],
+    "admitted_role_results": [
+      {
+        "role": "lens",
+        "lens": "review-risk",
+        "value": {
+          "result": {
+            "lens": "review-risk",
+            "findings": [
+              {
+                "id": "F1",
+                "severity": "CRITICAL",
+                "claim": "redacted"
+              },
+              {
+                "id": "F2",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F3",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F4",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "role": "lens",
+        "lens": "review-resilience",
+        "value": {
+          "result": {
+            "lens": "review-resilience",
+            "findings": [
+              {
+                "id": "F1",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F2",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F3",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "role": "lens",
+        "lens": "review-readability",
+        "value": {
+          "result": {
+            "lens": "review-readability",
+            "findings": [
+              {
+                "id": "F1",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F2",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F3",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F4",
+                "severity": "WARNING",
+                "claim": "redacted"
+              },
+              {
+                "id": "F5",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              },
+              {
+                "id": "F6",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              },
+              {
+                "id": "F7",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              },
+              {
+                "id": "F8",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              },
+              {
+                "id": "F9",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              },
+              {
+                "id": "F10",
+                "severity": "SUGGESTION",
+                "claim": "redacted"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "role": "lens",
+        "lens": "review-reliability",
+        "value": {
+          "result": {
+            "lens": "review-reliability",
+            "findings": [
+              {
+                "id": "F1",
+                "severity": "WARNING",
+                "claim": "redacted"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "role": "refuter",
+        "value": {}
+      }
+    ]
+  }
+}

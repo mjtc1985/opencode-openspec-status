@@ -1,0 +1,4 @@
+1790355589 2026-09-25T18:59:49+0200 Regular File 2497 /home/dev/projects/homelab/openspec/changes/uptime-diagnostics/proposal.md
+1790355602 2026-09-25T19:00:02+0200 Regular File 2261 /home/dev/projects/homelab/openspec/changes/uptime-diagnostics/specs/monitoring-diagnostics/spec.md
+1790355621 2026-09-25T19:00:21+0200 Regular File 3705 /home/dev/projects/homelab/openspec/changes/uptime-diagnostics/design.md
+1790356570 2026-09-25T19:16:10+0200 Regular File 2305 /home/dev/projects/homelab/openspec/changes/uptime-diagnostics/tasks.md

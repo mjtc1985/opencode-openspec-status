@@ -1,0 +1,84 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "deploy-agent-rpi",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/home/dev/projects/homelab/openspec"
+  },
+  "changeRoot": "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi",
+  "artifactPaths": {
+    "proposal": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/proposal.md"
+    ],
+    "specs": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/specs/status-agent/spec.md"
+    ],
+    "design": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/design.md"
+    ],
+    "tasks": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/proposal.md"
+    ],
+    "specs": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/specs/status-agent/spec.md"
+    ],
+    "design": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/design.md"
+    ],
+    "tasks": [
+      "/home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/tasks.md"
+    ],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "done",
+    "proposal": "done",
+    "specs": "done",
+    "tasks": "done",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 16,
+    "completed": 16,
+    "pending": 0,
+    "allComplete": true
+  },
+  "dependencies": {
+    "proposal": "all_done",
+    "specs": "all_done",
+    "design": "all_done",
+    "tasks": "all_done",
+    "apply": "all_done",
+    "verify": "ready",
+    "archive": "ready"
+  },
+  "applyState": "all_done",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/home/dev/projects/homelab",
+    "allowedEditRoots": [
+      "/home/dev/projects/homelab"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "archive",
+  "blockedReasons": [],
+  "notes": []
+}

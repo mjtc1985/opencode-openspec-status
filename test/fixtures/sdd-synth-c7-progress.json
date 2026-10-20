@@ -1,0 +1,88 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": "c7-progress",
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/tmp/fixtures/synth/openspec"
+  },
+  "changeRoot": "/tmp/fixtures/synth/openspec/changes/c7-progress",
+  "artifactPaths": {
+    "proposal": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/proposal.md"
+    ],
+    "specs": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/specs/status-agent/spec.md"
+    ],
+    "design": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/design.md"
+    ],
+    "tasks": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/tasks.md"
+    ],
+    "applyProgress": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/apply-progress.md"
+    ],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/proposal.md"
+    ],
+    "specs": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/specs/status-agent/spec.md"
+    ],
+    "design": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/design.md"
+    ],
+    "tasks": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/tasks.md"
+    ],
+    "applyProgress": [
+      "/tmp/fixtures/synth/openspec/changes/c7-progress/apply-progress.md"
+    ],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "done",
+    "design": "done",
+    "proposal": "done",
+    "specs": "done",
+    "tasks": "done",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 16,
+    "completed": 16,
+    "pending": 0,
+    "allComplete": true
+  },
+  "dependencies": {
+    "proposal": "all_done",
+    "specs": "all_done",
+    "design": "all_done",
+    "tasks": "all_done",
+    "apply": "all_done",
+    "verify": "ready",
+    "archive": "ready"
+  },
+  "applyState": "all_done",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/tmp/fixtures/synth",
+    "allowedEditRoots": [
+      "/tmp/fixtures/synth"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "archive",
+  "blockedReasons": [],
+  "notes": []
+}

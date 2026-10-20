@@ -1,0 +1,4 @@
+1790349767 2026-09-25T17:22:47+0200 Regular File 3377 /home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/proposal.md
+1790349774 2026-09-25T17:22:54+0200 Regular File 4487 /home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/specs/status-agent/spec.md
+1790349787 2026-09-25T17:23:07+0200 Regular File 5954 /home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/design.md
+1790352258 2026-09-25T18:04:18+0200 Regular File 2937 /home/dev/projects/homelab/openspec/changes/deploy-agent-rpi/tasks.md

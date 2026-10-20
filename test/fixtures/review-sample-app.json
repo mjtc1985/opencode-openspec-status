@@ -1,0 +1,65 @@
+{
+  "schema": "gentle-ai.review-authority-status/v1",
+  "operation": "review/status",
+  "repository": "/home/dev/projects/sample-app",
+  "complete": true,
+  "authoritative": true,
+  "status": "active",
+  "entries": [
+    {
+      "version": "compact-v2",
+      "lineage_id": "review-ff3e92437e221e59",
+      "path": "/home/dev/projects/sample-app/.git/gentle-ai/review-transactions/v2/review-ff3e92437e221e59",
+      "status": "superseded",
+      "state": "correction_required",
+      "revision": "sha256:c6cb5bb6e91796550dd8586a29c3b53387571d7413d4267e480b7d2da3376950",
+      "snapshot_identity": "sha256:529e8d5bad4b8bc1ee4cae2ce48d7f3151f2f05ee5f5bcbaa1e6a138c6e29ece",
+      "discarded_work": {
+        "captured_lens_results": [
+          "00-review-risk",
+          "01-review-resilience",
+          "02-review-readability",
+          "03-review-reliability"
+        ],
+        "findings_present": true
+      },
+      "problems": []
+    },
+    {
+      "version": "compact-v2",
+      "lineage_id": "review-ff3e92437e221e59-r1",
+      "path": "/home/dev/projects/sample-app/.git/gentle-ai/review-transactions/v2/review-ff3e92437e221e59-r1",
+      "status": "recovered",
+      "state": "correction_required",
+      "revision": "sha256:a6c2aa898023c971087bd90f90957a9b33a77cabd1697924811023d5cce62175",
+      "snapshot_identity": "sha256:f534f80d383318be3e633ae3f7d40a37b0e05a25b721114d6e8fd3b89216a3ae",
+      "discarded_work": {
+        "captured_lens_results": [
+          "00-review-risk",
+          "01-review-resilience",
+          "02-review-readability",
+          "03-review-reliability"
+        ],
+        "findings_present": true
+      },
+      "recovery": {
+        "predecessor_lineage_id": "review-ff3e92437e221e59",
+        "predecessor_revision": "sha256:c6cb5bb6e91796550dd8586a29c3b53387571d7413d4267e480b7d2da3376950",
+        "disposition": "scope_changed",
+        "reason": "self-recovery: correction-required authority, recover action available",
+        "actor": "Jane Doe \u003cjane@example.com\u003e",
+        "recovered_at": "2026-09-30T10:13:34.944606Z",
+        "maintainer_authorization": "gentle-ai.review-recovery-authorization/v1\npredecessor_lineage=review-ff3e92437e221e59\npredecessor_revision=sha256:c6cb5bb6e91796550dd8586a29c3b53387571d7413d4267e480b7d2da3376950\ntarget_identity=sha256:f534f80d383318be3e633ae3f7d40a37b0e05a25b721114d6e8fd3b89216a3ae\nactor=Jane Doe \u003cjane@example.com\u003e\nreason=self-recovery: correction-required authority, recover action available"
+      },
+      "problems": []
+    }
+  ],
+  "locks": [
+    {
+      "version": "compact-v2",
+      "path": "/home/dev/projects/sample-app/.git/gentle-ai/review-transactions/v2/LOCK",
+      "status": "released"
+    }
+  ],
+  "diagnostics": []
+}

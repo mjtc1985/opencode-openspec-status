@@ -1,0 +1,72 @@
+{
+  "schemaName": "gentle-ai.sdd-status",
+  "schemaVersion": 2,
+  "changeName": null,
+  "artifactStore": "openspec",
+  "planningHome": {
+    "mode": "repo-local",
+    "path": "/home/dev/projects/homelab/openspec"
+  },
+  "changeRoot": null,
+  "artifactPaths": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "contextFiles": {
+    "proposal": [],
+    "specs": [],
+    "design": [],
+    "tasks": [],
+    "applyProgress": [],
+    "verifyReport": []
+  },
+  "artifacts": {
+    "applyProgress": "missing",
+    "design": "missing",
+    "proposal": "missing",
+    "specs": "missing",
+    "tasks": "missing",
+    "verifyReport": "missing"
+  },
+  "taskProgress": {
+    "total": 0,
+    "completed": 0,
+    "pending": 0,
+    "allComplete": false
+  },
+  "dependencies": {
+    "proposal": "blocked",
+    "specs": "blocked",
+    "design": "blocked",
+    "tasks": "blocked",
+    "apply": "blocked",
+    "verify": "blocked",
+    "archive": "blocked"
+  },
+  "applyState": "blocked",
+  "actionContext": {
+    "mode": "repo-local",
+    "workspaceRoot": "/home/dev/projects/homelab",
+    "allowedEditRoots": [
+      "/home/dev/projects/homelab"
+    ]
+  },
+  "relationships": {
+    "dependsOn": [],
+    "supersedes": [],
+    "amends": [],
+    "conflictsWith": [],
+    "sameDomainActiveChanges": []
+  },
+  "nextRecommended": "select-change",
+  "blockedReasons": [
+    "Change selection is ambiguous: deploy-agent-rpi, uptime-diagnostics.",
+    "Run `gentle-ai sdd-status deploy-agent-rpi --cwd /home/dev/projects/homelab` to continue with deploy-agent-rpi.",
+    "Run `gentle-ai sdd-status uptime-diagnostics --cwd /home/dev/projects/homelab` to continue with uptime-diagnostics."
+  ],
+  "notes": []
+}

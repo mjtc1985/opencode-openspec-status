@@ -1,0 +1,2 @@
+1790454680 2026-09-26T22:31:20+0200 Regular File 2943 /home/dev/projects/venue-finder/openspec/changes/find-alternative-venue/proposal.md
+1790760599 2026-09-30T11:29:59+0200 Regular File 1931 /home/dev/projects/venue-finder/openspec/changes/find-alternative-venue/tasks.md
