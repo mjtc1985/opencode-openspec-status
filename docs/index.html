@@ -56,7 +56,7 @@
 <main>
   <h1>opencode-<span>openspec-status</span></h1>
   <p class="lead">An OpenCode TUI plugin that draws, in the right sidebar, where your OpenSpec (SDD) change or ODD feature stands and what comes next. It only reads: it never changes the state of your project or of gentle-ai.</p>
-  <div class="pills"><span class="pill">OpenCode 1.18.x</span><span class="pill">OpenSpec</span><span class="pill">gentle-ai 3.7 optional</span><span class="pill">Bun + Solid + opentui</span><span class="pill">English · Español</span><span class="pill">GPL-3.0</span></div>
+  <div class="pills"><span class="pill">OpenCode 1.18.x and 2.1.x</span><span class="pill">OpenSpec</span><span class="pill">gentle-ai 3.7 optional</span><span class="pill">Bun + Solid + opentui</span><span class="pill">English · Español</span><span class="pill">GPL-3.0</span></div>
 
   <h2>What it shows</h2>
   <p>Every screenshot comes from the real OpenCode 1.18.35 TUI on a small demo project, <code>bookshop-api</code>, with two OpenSpec changes and one ODD feature.</p>
@@ -91,8 +91,12 @@
   <h3>Install</h3>
   <pre>git clone https://github.com/mjtc1985/opencode-openspec-status.git
 cd opencode-openspec-status &amp;&amp; bun install</pre>
-  <p>Then add the absolute path of the folder to the <code>plugin</code> array of <code>~/.config/opencode/tui.json</code>:</p>
+  <p><strong>OpenCode 1.x</strong>: add the absolute path of the folder to the <code>plugin</code> array of <code>~/.config/opencode/tui.json</code>:</p>
   <pre>{ "plugin": ["/absolute/path/to/opencode-openspec-status"] }</pre>
+  <p><strong>OpenCode 2.x</strong>: link the folder into the global plugins folder:</p>
+  <pre>mkdir -p ~/.config/opencode/plugins
+ln -s /absolute/path/to/opencode-openspec-status ~/.config/opencode/plugins/openspec-status</pre>
+  <p>Both can be installed at once: OpenCode 2 does not read <code>tui.json</code>, and OpenCode 1 keeps working normally with the link in its <code>plugins/</code> folder.</p>
   <p>The sidebar only exists inside a session; <code>/openspec-status</code> also works from the home screen.</p>
 
   <h3>Keys in <code>/openspec-status</code></h3>
@@ -136,7 +140,8 @@ cd opencode-openspec-status &amp;&amp; bun install</pre>
     <div><b>runtime/</b>Command execution (allowlist, timeout, no shell), per-source polling with a watchdog, detail loading, session activity and new-work detection.</div>
     <div><b>view/</b><code>Snapshot</code> → <code>FlowView</code> → lines of <code>{ text, color, bold }</code> segments for the sidebar, the detail, the overview and the indicator. No IO.</div>
     <div><b>i18n.ts</b>English and Spanish messages, <code>t(key, params)</code> and locale detection.</div>
-    <div><b>tui.tsx</b>Only draws: registers the OpenCode slots, the <code>openspec-status</code> route, the command and key layers, and maps colors to the theme. The only file tied to the OpenCode API.</div>
+    <div><b>app.tsx</b>The plugin itself, independent of the OpenCode version: poller, pin, session activity, the route views and their keys, behind a small <code>Host</code> interface.</div>
+    <div><b>tui.tsx · opencode-2.tsx</b>Thin adapters that map the OpenCode 1.x and 2.x TUI APIs onto <code>Host</code>: slots, route, commands and keys, pin storage and theme colors. The only files tied to an OpenCode API.</div>
   </div>
 
   <h3>Where the data comes from</h3>
@@ -168,8 +173,9 @@ cd opencode-openspec-status &amp;&amp; bun install</pre>
   <h3>Drawing</h3>
   <p>Each line is a list of segments; each segment, an opentui <code>&lt;text&gt;</code> inside a row (<code>&lt;span&gt;</code> has no typed color) with <code>flexShrink=0</code>. The sidebar is 42 columns wide but leaves about 36 usable, so it is drawn at 36. Widths are measured with <code>displayWidth</code> (emoji and CJK take 2 columns) and only fixed-width characters are used: thin box drawing <code>┌─┐</code> and <code>✓ ◉ ○ ✗ ⚠ ▸ ▼ ◀</code>.</p>
 
-  <h3>OpenCode 2</h3>
-  <p>OpenCode 2 is opt-in and ships a new plugin API (<code>@opencode/plugin</code>, <code>Plugin.define</code>, slots such as <code>sidebar.content</code>); 1.x plugins do not load there. Since only <code>tui.tsx</code> touches the OpenCode API, OpenCode 2 support is planned as a second thin adapter in the same repository.</p>
+  <h3>OpenCode 1 and 2 from one folder</h3>
+  <p>OpenCode 2 ships a new plugin API (<code>@opencode/plugin</code>, <code>Plugin.define</code>, slots such as <code>sidebar.content</code>), so a 1.x plugin does not load there. Each version gets its own adapter, and the two loaders look in different places: OpenCode 1 follows the <code>./tui</code> export of <code>package.json</code> (<code>src/tui.tsx</code>), while OpenCode 2 loads <code>&lt;folder&gt;/tui</code> (<code>tui.ts</code> at the root, which re-exports <code>src/opencode-2.tsx</code>). Both adapters are typechecked in CI against their own API package, and both were checked in the real TUI: 1.18.35 and 2.1.1.</p>
+  <figure style="max-width:420px"><img src="img/sidebar-opencode-2.png" alt="The sidebar in OpenCode 2.1.1"><figcaption><b>OpenCode 2.1.1</b>The same sidebar, drawn by the 2.x adapter.</figcaption></figure>
 
   <div class="note"><strong>Known limitations.</strong> ODD has no machine-readable state, so it depends on the markdown format. The review lenses are read from an internal gentle-ai file. The detail clock is covered by tests only: OpenCode does not let you open <code>/openspec-status</code> while the agent is working.</div>
 

@@ -47,8 +47,8 @@ A guide with screenshots and a technical walkthrough lives in
 
 ## Requirements
 
-- OpenCode **1.18.x** (TUI plugin API `@opencode-ai/plugin` 1.18.33). OpenCode 2
-  uses a different plugin API; see [OpenCode 2](#opencode-2).
+- OpenCode **1.18.x** or **2.1.x**. The two use different plugin APIs; the same
+  folder ships an adapter for each (see [OpenCode 2](#opencode-2)).
 - [Bun](https://bun.sh), which OpenCode already uses to load plugins.
 - Optional: `gentle-ai` on the `PATH`, and `git`.
 
@@ -62,7 +62,7 @@ cd opencode-openspec-status
 bun install
 ```
 
-Add the absolute path of the folder to the `plugin` array of
+**OpenCode 1.x**: add the absolute path of the folder to the `plugin` array of
 `~/.config/opencode/tui.json`:
 
 ```json
@@ -76,6 +76,17 @@ global ones:
 ```sh
 OPENCODE_TUI_CONFIG=/path/to/tui-test.json opencode <project>
 ```
+
+**OpenCode 2.x**: link the folder into the global plugins folder:
+
+```sh
+mkdir -p ~/.config/opencode/plugins
+ln -s /absolute/path/to/opencode-openspec-status ~/.config/opencode/plugins/openspec-status
+```
+
+Both can be installed at once: OpenCode 2 does not read `tui.json`, and OpenCode 1
+keeps working normally with the link in its `plugins/` folder (checked on
+1.18.35).
 
 ## Usage
 
@@ -182,11 +193,22 @@ their real location before reading, and every parser is linear.
 ## OpenCode 2
 
 OpenCode 2 is opt-in (`opencode upgrade --major`) and ships a new plugin API
-(`@opencode/plugin`, `Plugin.define`, slots such as `sidebar.content`). Plugins
-written for 1.x do not load there. This release targets OpenCode 1.x; OpenCode 2
-support is planned as a second, thin adapter in this same repository, since
-everything below `src/tui.tsx` (sources, view model and renderer) does not depend
-on the OpenCode API.
+(`@opencode/plugin`, `Plugin.define`, slots such as `sidebar.content`), so a 1.x
+plugin does not load there. Everything except the entry points is shared
+(`src/app.tsx` and below); each version has a thin adapter:
+
+| | OpenCode 1.x | OpenCode 2.x |
+| --- | --- | --- |
+| Entry point | `./tui` export → `src/tui.tsx` | `tui.ts` at the folder root → `src/opencode-2.tsx` |
+| Install | `plugin` in `tui.json` | link in `~/.config/opencode/plugins/` |
+| Pin storage | TUI KV (`api.kv`) | plugin storage (`context.storage`) |
+| Verified on | 1.18.35 | 2.1.1 |
+
+To keep OpenCode 1 as `opencode` and try OpenCode 2 next to it, install the 2.x
+binary somewhere else instead of upgrading in place; `opencode upgrade --major`
+replaces the 1.x install.
+
+![The sidebar in OpenCode 2.1.1](docs/img/sidebar-opencode-2.png)
 
 ## Development
 

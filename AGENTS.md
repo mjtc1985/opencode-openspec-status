@@ -20,8 +20,14 @@ one.
   fallback PATH); `poller.ts`: per-source polling without overlaps, last value
   plus `stale`; `activity.ts`: the open session's activity (`api.state.session`:
   status, questions and permissions) and since when it has been working.
-- `src/tui.tsx` — only draws: the OpenCode slots and the `/openspec-status` route.
-  The only file that depends on the OpenCode plugin API.
+- `src/app.tsx` — the plugin itself, independent of the OpenCode version: poller,
+  pin, session activity, the route views and their keys, behind a small `Host`
+  interface (route, navigation, pin storage, session state, colors, renderer).
+- `src/tui.tsx` — OpenCode 1.x adapter (`@opencode-ai/plugin/tui`), loaded through
+  the `./tui` export of package.json.
+- `src/opencode-2.tsx` — OpenCode 2.x adapter (`@opencode/plugin/tui`), loaded
+  through `tui.ts` at the root (OpenCode 2 resolves `<folder>/tui`). Only the two
+  adapters depend on an OpenCode API; keep them thin and put behavior in `app.tsx`.
 - `test/fixtures/` — gentle-ai 3.7.0 outputs (anonymized) and synthetic ones
   marked `synth`.
 
@@ -53,8 +59,13 @@ one.
   with `displayWidth` from `src/view/text.ts`, never `.length`.
 - In opentui `<span>` has no typed `fg`: each segment is a `<text>` inside a
   `<box flexDirection="row">`.
-- The TUI plugin API is not in the public docs: read
-  `node_modules/@opencode-ai/plugin/dist/tui.d.ts` (1.18.33).
+- The TUI plugin APIs are not in the public docs: read
+  `node_modules/@opencode-ai/plugin/dist/tui.d.ts` (1.18.33) and
+  `node_modules/@opencode/plugin/dist/tui/context.d.ts` (2.1.1). In 2.x,
+  `ui.router.current()` is a live store: copy it before keeping it.
+- To try OpenCode 2 without replacing a 1.x install, run its binary from another
+  folder with `--standalone` (otherwise it starts a background service) and with
+  `XDG_*` pointing to a scratch folder.
 - Repository files can be hostile. Read them only with `fsx.readText(path,
   { maxBytes })` and the caps in `exec.ts` (regular files only, never blocking on
   a FIFO); never a direct `readFile`.
