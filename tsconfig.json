@@ -11,5 +11,5 @@
     "jsxImportSource": "@opentui/solid",
     "types": ["bun"]
   },
-  "include": ["src", "test"]
+  "include": ["src", "test", "tui.ts"]
 }
